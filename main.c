@@ -16,7 +16,7 @@ int main(void)
 	len = _printf("%s", "");
 	len2 = printf("%s", "");
 	_printf("Length:[%d, %i]\n", len, len);
-	/*printf("Length:[%d, %i]\n", len2, len2);*/
+	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Character:[%c]\n", 'H');
 	printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");

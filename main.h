@@ -26,6 +26,6 @@ const static var var_t[] = {
 	{'d', var_d},
 	{'s', var_s},
 	{NULL, NULL},
-}
+};
 
 #endif

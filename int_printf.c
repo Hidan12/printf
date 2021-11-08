@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	int index = 0;
+	int percents = 0;
 	int j = 0;
 	int v = 0;
 
@@ -23,6 +24,7 @@ int _printf(const char *format, ...)
 			v = percent(format[index + 1]);
 			if (v == 1)
 			{
+				percents += 2;
 				j = find_fun(format[index + 1], ap);
 				index += 2;
 			}
@@ -31,8 +33,10 @@ int _printf(const char *format, ...)
 				index++;
 			}
 		}
-		_putchar(format[index]);
+		if (format[index] != '\0')
+			_putchar(format[index]);
 	}
 	va_end(ap);
+	index -= percents;
 	return (j + index);
 }

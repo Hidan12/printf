@@ -2,7 +2,7 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <stdlib.h>
-#include <strio.h>
+#include <stdio.h>
 
 /* Structures */
 typedef struct var

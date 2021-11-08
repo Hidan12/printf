@@ -9,35 +9,29 @@
 
 int _printf(const char *format, ...)
 {
-	int (*ptr_f)(va_list list);
 	va_list ap;
 
 	int index = 0;
 	int i = 0;
 	int j = 0;
+	int v = 0;
 
 	va_start(ap, format);
 	for (; format[index]; index++)
 	{
-		if (format[index] == '%' && format[index + 1] != 37)
+		if (format[index] == '%')
 		{
-			for (; var_t[i].var; i++)
+			v = percent(format[index + 1]);
+			if (v == 1)
 			{
-				if (format[index + 1] == var_t[i].var[0])
-				{
-					ptr_f = var_t[i].c;
-					break;
-				}
-			}
-
-			if (*ptr_f)
-			{
-				j = ptr_f(ap);
+				j = find_fun(format[index + 1], ap);
 				index += 2;
 			}
+			else if (format[index + 1] == '%')
+			{
+				index++;
+			}
 		}
-		else if (format[index] == '%' &&  format[index + 1] == '%')
-			index++;
 		_putchar(format[index]);
 	}
 	va_end(ap);

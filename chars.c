@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * var_c - Print char.
  * @list: set the list of the va_list.

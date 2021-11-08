@@ -18,13 +18,9 @@ int print_num(int p)
 	if (p / 10)
 	{
 		print_num(p / 10);
-	}
-	_putchar((p % 10) + '0');
-
-	while ((p / 10) > 9)
-	{
 		count++;
 	}
+	_putchar((p % 10) + '0');
 	return (count++);
 }
 /**

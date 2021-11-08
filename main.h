@@ -5,6 +5,12 @@
 #include <stdio.h>
 
 /* Structures */
+/**
+ * struct var - Struct var
+ *
+ * @var: The operator
+ * @c: The function associated
+ */
 typedef struct var
 {
 	char *var;
@@ -22,7 +28,7 @@ int var_i(va_list list);
 int var_s(va_list list);
 int var_d(va_list list);
 
-const static var var_t[] = {
+static const var var_t[] = {
 	{"c", var_c},
 	{"i", var_i},
 	{"d", var_d},

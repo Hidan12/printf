@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	int index = 0;
-	int i = 0;
 	int j = 0;
 	int v = 0;
 

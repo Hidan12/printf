@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 	for (; format[index]; index++)
 	{
-		if (format[index] == '%' && format[index - 1] != 92)
+		if (format[index] == '%' && format[index + 1] != 37)
 		{
 			for (; var_t[i].var; i++)
 			{
@@ -36,8 +36,9 @@ int _printf(const char *format, ...)
 				index += 2;
 			}
 		}
-		if (format[index] != 92)
-			_putchar(format[index]);
+		else if (format[index] == '%' &&  format[index +1] == '%')
+			index++;
+		_putchar(format[index]);
 	}
 	va_end(ap);
 	return (j + index);

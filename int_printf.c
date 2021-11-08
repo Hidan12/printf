@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int_printf - Print something according the format
+ * _printf - Print something according the format
  *
  * @format: Elements format.
  *
@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				index += 2;
 			}
 		}
-		else if (format[index] == '%' &&  format[index +1] == '%')
+		else if (format[index] == '%' &&  format[index + 1] == '%')
 			index++;
 		_putchar(format[index]);
 	}

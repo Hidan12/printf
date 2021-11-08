@@ -12,7 +12,7 @@ typedef struct var
 } var;
 
 /* Prototypes */
-int int_printf(const char *format, ...);
+int _printf(const char *format, ...);
 int _putchar(char c);
 int print_num(int p);
 int var_c(va_list list);

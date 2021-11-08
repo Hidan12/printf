@@ -21,10 +21,10 @@ int var_s(va_list list);
 int var_d(va_list list);
 
 const static var var_t[] = {
-	{'c', var_c},
-	{'i', var_i},
-	{'d', var_d},
-	{'s', var_s},
+	{"c", var_c},
+	{"i", var_i},
+	{"d", var_d},
+	{"s", var_s},
 	{NULL, NULL},
 };
 

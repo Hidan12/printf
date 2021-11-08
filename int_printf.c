@@ -33,7 +33,7 @@ int int_printf(const char *format, ...)
 			if (*ptr_f)
 			{
 				j = ptr_f(ap);
-				index+=2;
+				index += 2;
 			}
 		}
 		if (format[index] != 92)

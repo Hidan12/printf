@@ -26,7 +26,17 @@ int var_s(va_list list)
 
 	s = va_arg(list, char *);
 
-	if (*s)
+	if (s == NULL)
+	{
+		_putchar(40);
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(41);
+		return (1);
+	}
+	if (*s != '\0')
 	{
 		for (; s[i] != '\0'; i++)
 		{

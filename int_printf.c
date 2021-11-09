@@ -7,13 +7,12 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-
 	int index = 0;
 	int percents = 0;
 	int j = 0;
 	int v = 0;
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(ap, format);
 	for (; format[index]; index++)

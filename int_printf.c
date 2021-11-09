@@ -34,14 +34,14 @@ int _printf(const char *format, ...)
 				percents++;
 			}
 		}
-		if (format[index] != '\0')
+		if (format[index] != '\0' && v == 0)
 			_putchar(format[index]);
 		else
-		{
 			index--;
-		}
+		v = 0;
 	}
 	va_end(ap);
 	index -= percents;
-	return (j + index++);
+	index += 1;
+	return (j + index);
 }

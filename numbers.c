@@ -18,9 +18,15 @@ int print_num(int p)
 	if (p / 10)
 	{
 		print_num(p / 10);
-		count++;
 	}
 	_putchar((p % 10) + '0');
+
+	while (p / 10)
+	{
+		count++;
+		p = p / 10;
+	}
+	count++;
 	return (count++);
 }
 /**
@@ -52,4 +58,3 @@ int var_i(va_list list)
 	count = print_num(i);
 	return (count);
 }
-

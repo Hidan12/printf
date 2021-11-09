@@ -42,6 +42,5 @@ int _printf(const char *format, ...)
 	}
 	va_end(ap);
 	index -= percents;
-	index += 1;
 	return (j + index);
 }

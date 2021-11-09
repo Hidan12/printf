@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 			else if (format[index + 1] == '%')
 			{
 				index++;
+				percents++;
 			}
 		}
 		if (format[index] != '\0')
@@ -42,5 +43,5 @@ int _printf(const char *format, ...)
 	}
 	va_end(ap);
 	index -= percents;
-	return (j + index++);
+	return (j + index);
 }

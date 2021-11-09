@@ -21,7 +21,8 @@ int var_c(va_list list)
 
 int var_s(va_list list)
 {
-	int i = 0;
+	/*int i = 0;*/
+	int count = 0;
 	char *s = NULL;
 
 	s = va_arg(list, char *);
@@ -36,12 +37,11 @@ int var_s(va_list list)
 		_putchar(41);
 		return (6);
 	}
-	if (*s != '\0')
+	while (*s)
 	{
-		for (; s[i] != '\0'; i++)
-		{
-			_putchar (s[i]);
-		}
+		_putchar(*s);
+		s++;
+		count++;
 	}
-	return (i);
+	return (count);
 }

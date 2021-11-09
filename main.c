@@ -41,5 +41,13 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
+    len = (_printf("%\n"));
+    len2 = (printf("%\n"));
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
+    len = (_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0));
+    len2 = (printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0));
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
     return (0);
 }

@@ -21,7 +21,6 @@ int var_c(va_list list)
 
 int var_s(va_list list)
 {
-	/*int i = 0;*/
 	int count = 0;
 	char *s = NULL;
 

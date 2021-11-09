@@ -20,7 +20,7 @@ typedef struct var
 /* Prototypes */
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_num(int p);
+int print_num(long int p);
 int percent(char u);
 int find_fun(char m, va_list ap);
 int var_c(va_list list);

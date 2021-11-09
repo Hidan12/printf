@@ -5,7 +5,7 @@
  * @p: int to print.
  * Return: the count of ints.
  */
-int print_num(int p)
+int print_num(long int p)
 {
 	int count = 0;
 
@@ -13,7 +13,7 @@ int print_num(int p)
 	{
 		p *= -1;
 		_putchar('-');
-		count ++;
+		count++;
 	}
 
 	if (p / 10)
@@ -21,7 +21,6 @@ int print_num(int p)
 		print_num(p / 10);
 	}
 	_putchar((p % 10) + '0');
-
 	while (p / 10)
 	{
 		count++;

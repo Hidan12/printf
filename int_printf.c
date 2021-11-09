@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
 			index--;
 		v = 0;
 	}
+	index -= percents;
 	va_end(ap);
 	return (j + index);
 }

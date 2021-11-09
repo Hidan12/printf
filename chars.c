@@ -42,5 +42,5 @@ int var_s(va_list list)
 		s++;
 		count++;
 	}
-	return (count);
+	return (count++);
 }

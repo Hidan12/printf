@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 	int percents = 0;
 	int j = 0;
 	int v = 0;
+	int  count = 0;
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -25,7 +26,7 @@ int _printf(const char *format, ...)
 			if (v == 1)
 			{
 				percents += 2;
-				j = find_fun(format[index + 1], ap);
+				j += find_fun(format[index + 1], ap);
 				index += 2;
 			}
 			else if (format[index + 1] == '%')
@@ -42,5 +43,6 @@ int _printf(const char *format, ...)
 	}
 	index -= percents;
 	va_end(ap);
-	return (j + index);
+	count = j + index;
+	return (count);
 }

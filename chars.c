@@ -34,7 +34,7 @@ int var_s(va_list list)
 		_putchar('l');
 		_putchar('l');
 		_putchar(41);
-		return (1);
+		return (6);
 	}
 	if (*s != '\0')
 	{

@@ -13,6 +13,7 @@ int print_num(int p)
 	{
 		p *= -1;
 		_putchar('-');
+		count ++;
 	}
 
 	if (p / 10)

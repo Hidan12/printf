@@ -16,6 +16,8 @@ int _printf(const char *format, ...)
 	int j = 0;
 	int v = 0;
 
+	if (format == NULL)
+		return (-1);
 	va_start(ap, format);
 	for (; format[index]; index++)
 	{

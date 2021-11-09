@@ -15,13 +15,13 @@ _printf(“%i”, 21);
 The interpretation of the convertion identifier are:
 
 .IP %c
-Let _printf know that the argument is character type.
+_printf print a character type argument.
 .IP %s
-Let _printf know that the argument is a string of characters.
+_printf print an argument that is a string of characters.
 .IP %i
-Let _printf know that the argument is an integer type.
+_printf print an integer type argument.
 .IP %d
-Let _printf know that the argument is a decimal type.
+_printf print a decimal type argument.
 .IP %%
 _printf print a single percent symbol (%).
 

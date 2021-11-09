@@ -59,6 +59,5 @@ int main(void)
     printf("Len:[%d]\n", len2);
     len = _printf("%s\n", str);
     len2 = printf("%s\n", str);
-    
     return (0);
 }

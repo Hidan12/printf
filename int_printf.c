@@ -33,13 +33,11 @@ int _printf(const char *format, ...)
 				percents++;
 			}
 		}
-		if (v == 0)
+		if (v == 0 && format[index] != '\0')
 			_putchar(format[index]);
-		if (v != 0)
-		{
+		else
 			index--;
-			v = 0;
-		}
+		v = 0;
 	}
 	va_end(ap);
 	index -= percents;

@@ -1,12 +1,9 @@
 #include "main.h"
 /**
  * _printf - Print something according the format
- *
  * @format: Elements format.
- *
  * Return: the number of characters printed.
  */
-
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -29,18 +26,19 @@ int _printf(const char *format, ...)
 				percents += 2;
 				j = find_fun(format[index + 1], ap);
 				index += 2;
-			}
+				}
 			else if (format[index + 1] == '%')
 			{
 				index++;
 				percents++;
 			}
 		}
-		if (format[index] != '\0')
+		if (v == 0)
 			_putchar(format[index]);
-		else
+		if (v != 0)
 		{
 			index--;
+			v = 0;
 		}
 	}
 	va_end(ap);

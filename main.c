@@ -14,9 +14,11 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
+    char *str = "When you invoke GCC , it normally does preprocessing, compilation, assembly and linking. The \"overall options\" allow you to stop this process at an intermediate stage. For example, the -c option says not to run the linker. Then the output consists of object files output by the assembler.\n\nOther options are pass";
 
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
+
+    len2 = printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
+    len = _printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
     ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
     _printf("Length:[%d, %i]\n", len, len);
@@ -45,8 +47,8 @@ int main(void)
     len2 = (printf("%\n"));
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    len = (_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0));
-    len2 = (printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0));
+    len = (_printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48));
+    len2 = (printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48));
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("%#lx\n");
@@ -55,6 +57,8 @@ int main(void)
     len2 = printf("Percent:[%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
+    len = _printf("%s\n", str);
+    len2 = printf("%s\n", str);
     
     return (0);
 }

@@ -1,36 +1,57 @@
-.TH _printf “1” “2021-11-09” “0x11” “Use of _printf”
+.TH _printf 1 2021-11-09 0x11 Use-of-_printf
 .SH NAME 
 _printf \ - print all kind of types.
 .SH SYNOPSIS
 .B _printf 
-.IR FORMAT [\fI\ARGUMENT\fI\]…
+.IR FORMAT 
+[ARGUMENT]…
 .SH DESCRIPTION
 .B _printf
 _printf is use to print an argument according the giving format.
 
 It use the percent symbol indentifier (%) to know the format of the argument, that is written in the next space like is presenting in the example below.
+.IP
 .B Example:
 _printf(“%i”, 21);
 
-The interpretation of the convertion identifier are:
+.B The interpretation of the convertion identifier are:
 
 .IP %c
 _printf print a character type argument.
+.IP
+.B Example:
+_printf(“%c”, 'H');
+
 .IP %s
 _printf print an argument that is a string of characters.
+.IP
+.B Example:
+_printf(“%s”, "Hola mundo");
+
 .IP %i
 _printf print an integer type argument.
+.IP
+.B Example:
+_printf(“%i”, -1024);
+
 .IP %d
 _printf print a decimal type argument.
+.IP
+.B Example:
+_printf(“%d”, 1024);
+
 .IP %%
 _printf print a single percent symbol (%).
+.IP
+.B Example:
+_printf(“%%”);
 
 All the elements of the format will be convert to the appropriate output character and the percent and the identifier won't being printed.
 
 .SH RETURN VALUE
-_printf return the count of the number of characters printed, excluding the null byte to end output to strings. If the format is empty it returns a -1 value.
+_printf return the count of the number of characters printed, excluding the null byte to end output to strings. If the format is empty and the argument is a single percent (%) it returns a -1 value.
 
 .SH AUTHORS
-Written by Daniela Botero Restrepo and Martin Vidan
+Written by Daniela Botero Restrepo and Martin Vidan.
 .SH SEE ALSO
 .I printf (3) and printf (1).
